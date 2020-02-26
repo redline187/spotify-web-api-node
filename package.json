@@ -1,6 +1,6 @@
 {
   "name": "@redline187/spotify-web-api-node",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "homepage": "https://github.com/redline187/spotify-web-api-node",
   "description": "A Node.js wrapper for Spotify's Web API",
   "main": "./src/server.js",
