@@ -1499,13 +1499,13 @@ SpotifyWebApi.prototype = {
   },
   addToQue: function(track,callback) {
     return WebApiRequest.builder(this.getAccessToken())
-      .withPath('/v1/me/player/add-to-queue?uri=spotify%3Atrack%3A' + track)
-/*       .withBodyParameters({
-        uri: track
-      }) */
-      .withHeaders({ 'Content-Type': 'application/json' })
+      .withPath('/v1/me/player/add-to-queue?uri=spotify:track:' + track)
+      .withBodyParameters({
+        uri: 'spotify:track:' + track
+      }) 
+      .withHeaders({ 'Content-Type': 'application/json' , 'Accept': 'application/json'})
       .build()
-      .execute(HttpManager.post, callback);
+      .execute(HttpManager.put, callback);
   },
 };
 
