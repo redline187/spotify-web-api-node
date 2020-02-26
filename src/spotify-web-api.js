@@ -1497,7 +1497,7 @@ SpotifyWebApi.prototype = {
       .build()
       .execute(HttpManager.get, callback);
   },
-  addToQue: function(callback,track) {
+  addToQue: function(track,callback) {
     console.log("Callback",callback)
     console.log("track",track)
     return WebApiRequest.builder(this.getAccessToken())
