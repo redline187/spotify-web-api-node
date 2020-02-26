@@ -1501,7 +1501,7 @@ SpotifyWebApi.prototype = {
     console.log("Callback",callback)
     console.log("track",track)
     return WebApiRequest.builder(this.getAccessToken())
-      .withPath('/v1/me/player/add-to-queue/?uri=' + encodeURIComponent(track))
+      .withPath('/v1/me/player/add-to-queue/?uri=' + track)
 /*       .withBodyParameters({
         uri: 'spotify:track:' + track
       })  */
