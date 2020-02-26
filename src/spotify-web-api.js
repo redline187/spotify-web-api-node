@@ -1499,7 +1499,7 @@ SpotifyWebApi.prototype = {
   },
   addToQue: function(track,callback) {
     return WebApiRequest.builder(this.getAccessToken())
-      .withPath('/v1/me/player/add-to-queue/' + track)
+      .withPath('/v1/me/player/add-to-queue/?uri=' + encodeURIComponent(track))
 /*       .withBodyParameters({
         uri: 'spotify:track:' + track
       })  */
