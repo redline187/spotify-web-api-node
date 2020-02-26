@@ -1505,7 +1505,7 @@ SpotifyWebApi.prototype = {
       }) 
       .withHeaders({ 'Content-Type': 'application/json' , 'Accept': 'application/json'})
       .build()
-      .execute(HttpManager.put, callback);
+      .execute(HttpManager.get, callback);
   },
 };
 
