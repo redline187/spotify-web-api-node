@@ -1,22 +1,21 @@
 {
-  "name": "spotify-web-api-node",
+  "name": "@redline187/spotify-web-api-node",
   "version": "4.0.0",
-  "homepage": "https://github.com/thelinmichael/spotify-web-api-node",
+  "homepage": "https://github.com/redline187/spotify-web-api-node",
   "description": "A Node.js wrapper for Spotify's Web API",
   "main": "./src/server.js",
   "author": "Michael Thelin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thelinmichael/spotify-web-api-node.git"
+    "url": "git+https://github.com/redline187/spotify-web-api-node.git"
   },
   "dependencies": {
     "superagent": "^3.7.0"
   },
   "scripts": {
     "test": "jest",
-    "travis":
-      "npm test -- --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "travis": "npm test -- --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "precommit": "lint-staged"
   },
   "jest": {
@@ -24,7 +23,10 @@
     "testURL": "http://localhost/"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --single-quote --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "coveralls": "^2.13.3",
@@ -45,5 +47,11 @@
   ],
   "browser": {
     "./src/server.js": "./src/client.js"
+  },
+  "bugs": {
+    "url": "https://github.com/thelinmichael/spotify-web-api-node/issues"
+  },
+  "directories": {
+    "example": "examples"
   }
 }

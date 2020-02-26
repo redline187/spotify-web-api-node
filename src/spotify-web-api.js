@@ -1496,7 +1496,17 @@ SpotifyWebApi.prototype = {
       .withQueryParameters(options)
       .build()
       .execute(HttpManager.get, callback);
-  }
+  },
+  addToQue: function(track,callback) {
+    return WebApiRequest.builder(this.getAccessToken())
+      .withPath('/v1/me/player/add-to-queue')
+      .withBodyParameters({
+        uri: track
+      })
+      .withHeaders({ 'Content-Type': 'application/json' })
+      .build()
+      .execute(HttpManager.post, callback);
+  },
 };
 
 SpotifyWebApi._addMethods = function(methods) {
